@@ -1,0 +1,22 @@
+{
+  "name": "conestv3",
+  "version": "1.0.0",
+  "description": "Sistema de gestão de estoque no comércio de bens e serviços",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoMeloLeo/conestv3.git"
+  },
+  "author": "Melo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeoMeloLeo/conestv3/issues"
+  },
+  "homepage": "https://github.com/LeoMeloLeo/conestv3#readme",
+  "devDependencies": {
+    "electron": "^33.0.2"
+  }
+}
