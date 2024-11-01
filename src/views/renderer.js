@@ -11,4 +11,16 @@ function clientes (){
     api.janelaClientes()
 }
 
+function fornecedor (){
+    api.janelaFornecedor()
+}
+
+function produtos (){
+    api.janelaprodutos()
+}
+
+function relatorios (){
+    api.janelaRelatorios()
+}
+
 
