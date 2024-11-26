@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Evitar ataques de injeção de código malicioso -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
-    <title>Conestv3 - Fornecedor</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>Conestv3 - fornecedores</title>
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
     <!--<h1>Conestv3</h1>-->
     <!-- Numeração de linhas -->
     <div id="linhas">
 
     </div>
-    <!-- EDITOR DO CÒDIGO-->
+    <!--EDITOR DO CÒDIGO-->
     <div class="container">
-        <h1>Fornecedor</h1>
+        <h1>Fornecedores</h1>
+
+        <form id="frmSupplier" class="mt-2 row g-3">
+            <!--Buscar fornecedores-->
+            <div class="col-md-6">
+                <input type="text"  class="form-control" id="searchFornecedor" maxlength="30" spellcheck="false">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" id="btnRead">Buscar</button>
+            </div>
+
+            <hr class="mt-4 border-primary border -1">
+
+            <!--Id do fornecedor(oculto)-->
+            <div class="cool-md-6" id="idSupplier">
+                <input class="form-control" type="text" id="inputSupplier" placeholder="id">
+            </div>
+
+            <!--Nome-->
+            <div class="col-md-8">
+                <label for="inputNameSupplier" class="form-label">Razão Social</label>
+                <input class="form-control" type="text" id="inputNameSupplier" spellcheck="false" required maxlength="50">
+            </div>
+
+            <!--Fone-->
+            <div class="col-md-4">
+                <label for="inputPhoneSupplier" class="form-label">Telefone</label>
+                <input class="form-control" type="tel" id="inputPhoneSupplier" spellcheck="false" required maxlength="15">
+            </div>
+
+            <!--Site-->
+            <div class="col-md-8">
+                <label for="inputSiteSupplier" class="form-label">Site</label>
+                <input class="form-control" type="text" id="inputSiteSupplier" spellcheck="false" required maxlength="50">
+            </div>
+
+            <!--Botões-->
+            <div class="mt-5">
+                <button type="submit" class="btn btn-success" id="btnCreate">Adicionar</button>
+                <button type="submit" class="btn btn-warning" id="btnUpdate">Editar</button>
+                <button type="submit" class="btn btn-danger" id="btnDelete">Excluir</button>
+                <button type="reset" class="btn" id="btnReset">Resetar</button>
+            </div>
+
+        </form>
     </div>
     <script src="../public//js/bootstrap.min.js"></script>
-    <script src="fornecedor.js"></script>
+    <script src="fornecedores.js"></script>
 </body>
+
 </html>

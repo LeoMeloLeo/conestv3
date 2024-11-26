@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Evitar ataques de injeção de código malicioso -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
     <title>Conestv3 - clientes</title>
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
     <!--<h1>Conestv3</h1>-->
     <!-- Numeração de linhas -->
     <div id="linhas">
 
     </div>
-    <!-- EDITOR DO CÒDIGO-->
+    <!--EDITOR DO CÒDIGO-->
     <div class="container">
         <h1>Clientes</h1>
+
+        <form id="frmClient" class="mt-2 row g-3">
+            <!--Buscar cliente-->
+            <div class="col-md-6">
+                <input type="text"  class="form-control" id="searchClient" maxlength="30" spellcheck="false">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" id="btnRead">Buscar</button>
+            </div>
+
+            <hr class="mt-4 border-primary border -1">
+
+            <!--Id do cliente(oculto)-->
+            <div class="cool-md-6" id="idClient">
+                <input class="form-control" type="text" id="inputClient" placeholder="id">
+            </div>
+
+            <!--Nome-->
+            <div class="col-md-8">
+                <label for="inputNameClient" class="form-label">Nome</label>
+                <input class="form-control" type="text" id="inputNameClient" spellcheck="false" required maxlength="50">
+            </div>
+
+            <!--Fone-->
+            <div class="col-md-4">
+                <label for="inputPhoneClient" class="form-label">Telefone</label>
+                <input class="form-control" type="tel" id="inputPhoneClient" spellcheck="false" required maxlength="15">
+            </div>
+
+            <!--Email-->
+            <div class="col-md-8">
+                <label for="inputEmailClient" class="form-label">E-mail</label>
+                <input class="form-control" type="email" id="inputEmailClient" spellcheck="false" required maxlength="50">
+            </div>
+
+            <!--Botões-->
+            <div class="mt-5">
+                <button type="submit" class="btn btn-success" id="btnCreate">Adicionar</button>
+                <button type="submit" class="btn btn-warning" id="btnUpdate">Editar</button>
+                <button type="submit" class="btn btn-danger" id="btnDelete">Excluir</button>
+                <button type="reset" class="btn" id="btnReset">Resetar</button>
+            </div>
+
+        </form>
     </div>
     <script src="../public//js/bootstrap.min.js"></script>
     <script src="clientes.js"></script>
 </body>
+
 </html>
